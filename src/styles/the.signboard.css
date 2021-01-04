@@ -1,0 +1,26 @@
+#s-control {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+#s-control > div {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  height: 50px;
+  border: 1px solid #00a0ff;
+  background-color: rgb(255, 255, 255);
+  box-sizing: border-box;
+  border-radius: 25px;
+  box-shadow: 0 0 4px 4px rgba(0, 162, 255, 0.2);
+}
+
+#s-control i.iconfont {
+  line-height: 50px;
+  font-size: 24px;
+  color: #00a0ff;
+}
