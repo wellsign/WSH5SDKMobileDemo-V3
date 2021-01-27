@@ -41,11 +41,11 @@ export default class SignStandard extends Component {
       },
       onWriteStart: () => {
         console.log(`[demo] 圈批开启`)
-        this.setState({ writeScreen: true }, () => { this.ctx.ResizeHeight() })
+        this.setState({ writeScreen: true }, () => { this.ctx.Resize() })
       },
       onWriteEnd: () => {
         console.log(`[demo] 圈批关闭`)
-        this.setState({ writeScreen: false }, () => { this.ctx.ResizeHeight() })
+        this.setState({ writeScreen: false }, () => { this.ctx.Resize() })
       },
       onSignboardStart: () => {
         console.log(`[demo] 签字板开启`)
