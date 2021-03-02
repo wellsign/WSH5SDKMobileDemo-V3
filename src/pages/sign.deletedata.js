@@ -1,5 +1,4 @@
 import React from 'react'
-import safeAreaInsets from 'safe-area-insets'
 import {
   TabBar,
   Toast
@@ -24,7 +23,7 @@ export default class DeleteDataPage extends React.Component {
       callerId: 'wellsign',
       callerName: '好签',
       callerDesc: '签字用好签',
-      safeAreaBottom: safeAreaInsets.bottom,
+      renderControl: false,
       onRenderEnd: result => {
         if (result.success === true) {
           this.ctx = ctx
@@ -62,7 +61,7 @@ export default class DeleteDataPage extends React.Component {
     return (
     <div className="ws-page">
       {/* 签字视图 */}
-      <div id="ctxEl" style={{ height: `calc(100%${safeAreaInsets.bottom ? ' - 30px' : ''}${!this.state.writeScreen ? ' - 50px' : ''})` }}></div>
+      <div id="ctxEl" style={{ height: `calc(100% - 50px)` }}></div>
       {/* 底部按钮 */}
       <div className="ws-bottom" style={{ height: '50px', overflow: 'hidden' }}>
         <TabBar noRenderContent={true} >

@@ -25,6 +25,7 @@ export default class SignSignboard extends React.Component {
       callerName: '好签',
       callerDesc: '好签公司',
       customSignboardUI: true, // 自定义签字板的UI
+      renderControl: false,
       onRenderEnd: result => {
         if (result.success === true) {
           this.ctx = ctx
@@ -38,7 +39,6 @@ export default class SignSignboard extends React.Component {
         console.log(`[demo] 签字板开启`, control)
         this.control = control
         this.setState({ visible: true })
-        // end
       }
     })
   }
@@ -82,6 +82,7 @@ export default class SignSignboard extends React.Component {
             icon={<i className="iconfont iconduigoux"/>}/>
         </TabBar>
       </div>
+      {/* 自定义的签字板UI */}
       { this.state.visible ? <TheSignboardUI
         onCancel={() => {
           this.control && this.control.fireCancel()

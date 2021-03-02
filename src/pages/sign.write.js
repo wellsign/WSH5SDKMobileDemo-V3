@@ -25,6 +25,7 @@ export default class SignWrite extends React.Component {
       callerName: '好签',
       callerDesc: '好签公司',
       customWriteUI: true, // 自定义圈批的UI
+      renderControl: false,
       onRenderEnd: result => {
         if (result.success === true) {
           this.ctx = ctx
@@ -80,6 +81,7 @@ export default class SignWrite extends React.Component {
             icon={<i className="iconfont iconduigoux"/>}/>
         </TabBar>
       </div>
+      {/* 自定义的圈批的UI */}
       { this.state.visible && <TheWriteUI
           onInit={(color, size) => {
             this.control && this.control.setLineSize(size)

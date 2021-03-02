@@ -21,6 +21,7 @@ export default class SignTimestemp extends React.Component {
       callerId: 'wellsign',
       callerName: '好签',
       callerDesc: '好签公司',
+      renderControl: false,
       onRenderEnd: result => {
         if (result.success === true) {
           this.ctx = ctx

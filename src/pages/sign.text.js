@@ -21,6 +21,7 @@ export default class SignText extends React.Component {
       callerId: 'wellsign',
       callerName: '好签',
       callerDesc: '好签公司',
+      renderControl: false,
       onRenderEnd: result => {
         if (result.success === true) {
           this.ctx = ctx
@@ -31,17 +32,18 @@ export default class SignText extends React.Component {
       },
       // 当文本被编辑的时候回调。如果配置了本回调方法，默认编辑弹窗不会显示
       onTextEdit: ({ text, color }, callback) => {
+        console.log(text)
         Modal.prompt('编辑文本', undefined, [
           { text: '关闭' },
           {
             text: '确定',
             onPress: value => {
               if (value) {
-                callback(value + '_好签-20210101', color)
+                callback(value, color, 20, 2000)
               }
             }
           }
-        ], 'default', text.substring(0, text.length - 12), ['输入文本'])
+        ], 'default', text, ['输入文本'])
       }
     })
   }
@@ -61,7 +63,7 @@ export default class SignText extends React.Component {
         text: '确定',
         onPress: value => {
           if (value) {
-            this.ctx && this.ctx.InsertText(value + '_好签-20210101', '#00a0ff')
+            this.ctx && this.ctx.InsertText(value, '#00a0ff', 20, 200, false)
           }
         }
       }
