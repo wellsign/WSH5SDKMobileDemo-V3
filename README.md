@@ -1,7 +1,6 @@
 ### 简介
 - 此Demo项目 基于 create-react-app + ant-design-mobile 进行构建，请至少了解 create-react-app 这一前端构建框架。[Create React App](https://github.com/facebook/create-react-app)
 - 好签H5SDK jsapi 不依赖任何 框架，本Demo只是为了展示自定义功能，在vue、jQuery中同样适用。
-- `/build` 中是打包好的示例界面，下载或克隆demo后可以直接打开运行。
 
 
 ### 运行本Demo
